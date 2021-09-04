@@ -1,3 +1,4 @@
 node_modules
 cypress 
-vscode
+package-lock.json
+vscodejsconfig.json

@@ -16,7 +16,20 @@
  * @type {Cypress.PluginConfig}
  */
 // eslint-disable-next-line no-unused-vars
+const { downloadFile } = require('cypress-downloadfile/lib/addPlugin')
+const { isFileExist } = require('cy-verify-downloads');
+const selectTestsWithGrep = require('cypress-select-tests/grep')
+
+
+
 module.exports = (on, config) => {
   // `on` is used to hook into various events Cypress emits
   // `config` is the resolved Cypress config
+  on('task', { downloadFile })
+  on('task', { isFileExist })
+
+  on('file:preprocessor', selectTestsWithGrep(config))
+  require('cypress-grep/src/plugin')(config)
+
 }
+
