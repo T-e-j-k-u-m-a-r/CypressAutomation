@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "cy:open": "cypress open",
+    "test": "cypress open",
+    "cyexplore": "",
     "cy:run": "cypress run --spec 'C:/Users/admin/Downloads/Cypress/CypressAutomation/cypress/integration/Tejkumar/01Basics/*.js' --browser chrome --headed"
   },
   "keywords": [],
@@ -13,11 +14,13 @@
   "devDependencies": {
     "@4tw/cypress-drag-drop": "^1.8.1",
     "cy-verify-downloads": "0.0.5",
-    "cypress": "^8.3.1",
+    "cypress": "^8.7.0",
+    "cypress-dashboard": "^3.1.4",
     "cypress-downloadfile": "^1.2.1",
     "cypress-file-upload": "^5.0.8",
     "cypress-grep": "^2.5.3",
     "cypress-parallel": "^0.3.0",
+    "cypress-real-events": "^1.5.1",
     "cypress-select-tests": "^1.7.1",
     "cypress-xpath": "^1.6.2",
     "moment": "^2.29.1"
